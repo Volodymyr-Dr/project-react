@@ -20,7 +20,7 @@ const AppRouter = () => {
       <Route exact path="/project-react/error">
         <Error />
       </Route>
-      <Redirect to="/project-react/error" />
+      <Redirect to="/project-react/posts" />
     </Switch>
   );
 };
