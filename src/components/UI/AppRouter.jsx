@@ -8,7 +8,7 @@ import PostIdPage from "../../pages/PostIdPage";
 const AppRouter = () => {
   return (
     <Switch>
-      <Route path="/project-react/about">
+      <Route exact path="/project-react/about">
         <About />
       </Route>
       <Route exact path="/project-react/posts">
@@ -17,7 +17,7 @@ const AppRouter = () => {
       <Route exact path="/project-react/posts/:id">
         <PostIdPage />
       </Route>
-      <Route path="/project-react/error">
+      <Route exact path="/project-react/error">
         <Error />
       </Route>
       <Redirect to="/project-react/error" />
