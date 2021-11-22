@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar__links">
         <NavLink to="/project-react/about">Про сайт</NavLink>
-        <NavLink to="/project-react/posts">Пости</NavLink>
+        <NavLink exact to="/project-react/posts">Пости</NavLink>
       </div>
     </div>
   );
