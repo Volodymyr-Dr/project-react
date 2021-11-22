@@ -12,9 +12,9 @@ const AppRouter = () => {
         <About />
       </Route>
       <Route exact path="/project-react/posts">
-        <Posts />
+        <Posts/>
       </Route>
-      <Route  exact path="/project-react/posts/:id">
+      <Route  path="/project-react/posts/:id">
         <PostIdPage />
       </Route>
       <Route  path="/project-react/error">
