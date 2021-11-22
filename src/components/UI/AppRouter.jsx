@@ -14,7 +14,7 @@ const AppRouter = () => {
       <Route exact path="/project-react/posts">
         <Posts />
       </Route>
-      <Route  path="/project-react/posts/:id">
+      <Route  exact path="/project-react/posts/:id">
         <PostIdPage />
       </Route>
       <Route  path="/project-react/error">
