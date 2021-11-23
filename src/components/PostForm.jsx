@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import MyButton from "./UI/button/MyButton";
-import MyInput from "./UI/input/MyInput";
+import React, { useState } from 'react';
+import MyButton from './UI/button/MyButton';
+import MyInput from './UI/input/MyInput';
 
 const PostForm = ({ create, setVisible }) => {
-  const [post, setPost] = useState({ title: "", body: "" });
+  const [post, setPost] = useState({ title: '', body: '' });
 
   const addNewPost = (e) => {
     e.preventDefault();
@@ -12,7 +12,7 @@ const PostForm = ({ create, setVisible }) => {
       id: Date.now(),
     };
     create(newPost);
-    setPost({ title: "", body: "" });
+    setPost({ title: '', body: '' });
   };
 
   return (

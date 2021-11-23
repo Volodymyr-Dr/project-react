@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import PostService from "../API/PostService";
-import PorsFilter from "../components/PostFilter";
-import PostForm from "../components/PostForm";
-import PostList from "../components/PostList";
-import MyButton from "../components/UI/button/MyButton";
-import Loader from "../components/UI/Loader/Loader";
-import MyModal from "../components/UI/MyModal/MyModal";
-import { useFetching } from "../hooks/useFetching";
-import { usePosts } from "../hooks/usePosts";
+import PostService from '../API/PostService';
+import PorsFilter from '../components/PostFilter';
+import PostForm from '../components/PostForm';
+import PostList from '../components/PostList';
+import MyButton from '../components/UI/button/MyButton';
+import Loader from '../components/UI/Loader/Loader';
+import MyModal from '../components/UI/MyModal/MyModal';
+import { useFetching } from '../hooks/useFetching';
+import { usePosts } from '../hooks/usePosts';
 
 function Posts() {
   const [posts, setPosts] = useState([]);
-  const [filter, setFilter] = useState({ sort: "", query: "" });
+  const [filter, setFilter] = useState({ sort: '', query: '' });
   const [modal, setModal] = useState(false);
   const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
     const posts = await PostService.getAll();
@@ -36,21 +36,21 @@ function Posts() {
 
   return (
     <div className="App">
-      <MyButton style={{ marginTop: "30px" }} onClick={() => setModal(true)}>
+      <MyButton style={{ marginTop: '30px' }} onClick={() => setModal(true)}>
         Створити пост
       </MyButton>
       <MyModal visible={modal} setVisible={setModal}>
         <PostForm visible={modal} setVisible={setModal} create={createPost} />
       </MyModal>
-      <hr style={{ margin: "15px 0px" }} />
+      <hr style={{ margin: '15px 0px' }} />
       <PorsFilter filter={filter} setFilter={setFilter} />
       {postError && <h1>Виникла помилка ${postError}</h1>}
       {isPostsLoading ? (
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "50px",
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '50px',
           }}
         >
           <Loader />

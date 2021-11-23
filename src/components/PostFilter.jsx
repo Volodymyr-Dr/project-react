@@ -1,6 +1,6 @@
-import React from "react";
-import MyInput from "./UI/input/MyInput";
-import MySelect from "./UI/select/MySelect";
+import React from 'react';
+import MyInput from './UI/input/MyInput';
+import MySelect from './UI/select/MySelect';
 
 const PorsFilter = ({ filter, setFilter }) => {
   return (
@@ -17,8 +17,8 @@ const PorsFilter = ({ filter, setFilter }) => {
         }
         defaultValue="Сортування"
         options={[
-          { value: "title", name: "По назві" },
-          { value: "body", name: "По опису" },
+          { value: 'title', name: 'По назві' },
+          { value: 'body', name: 'По опису' },
         ]}
       />
     </div>

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import PostService from "../API/PostService";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import PostService from '../API/PostService';
 
 const PostIdPage = () => {
   const params = useParams();
@@ -30,7 +30,7 @@ const PostIdPage = () => {
       </div>
       <div>
         {comments.map((comm) => (
-          <div style={{ marginTop: "15px" }} key={comm.id}>
+          <div style={{ marginTop: '15px' }} key={comm.id}>
             <h5>{comm.email}</h5>
             <div>{comm.body}</div>
           </div>

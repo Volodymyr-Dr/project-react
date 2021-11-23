@@ -1,11 +1,11 @@
-import React from "react";
-import PostItem from "./PostItem";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import React from 'react';
+import PostItem from './PostItem';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const PostList = ({ posts, title, remove }) => {
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>{title}</h1>
+      <h1 style={{ textAlign: 'center' }}>{title}</h1>
       <TransitionGroup>
         {posts.map((post, index) => (
           <CSSTransition key={post.id} timeout={500} classNames="post">
